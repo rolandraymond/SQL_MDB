@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MySQL Dashboard</title>
+</head>
+<body>
+  <main class="container py-4">
+    <h1 class="mb-4">MySQL Dashboard</h1>
+
+    <section class="mb-4">
+      <h2 class="h5">Show Databases</h2>
+      <button id="loadBtn" type="button" class="btn btn-primary btn-sm">Load Databases</button>
+      <ul id="dbList" class="mt-3 list-group"></ul>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="h5">Add New Database</h2>
+      <div class="row g-2 align-items-center">
+        <div class="col-sm-6">
+          <label for="newDbName" class="form-label mb-1">Database name</label>
+          <input id="newDbName" type="text" class="form-control" placeholder="app_db" />
+        </div>
+        <div class="col-sm-auto">
+          <button id="addDbBtn" type="button" class="btn btn-success">Add Database</button>
+        </div>
+      </div>
+      <p id="dbMsg" class="mt-2 small text-muted"></p>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="h5">Add New User</h2>
+      <div class="row g-2">
+        <div class="col-sm-4">
+          <label for="newUser" class="form-label mb-1">Username</label>
+          <input id="newUser" type="text" class="form-control" placeholder=" app_user" />
+        </div>
+        <div class="col-sm-4">
+          <label for="newUserPass" class="form-label mb-1">Password</label>
+          <input id="newUserPass" type="password" class="form-control" placeholder="Password" autocomplete="new-password" />
+        </div>
+        <div class="col-sm-auto d-flex align-items-end">
+          <button id="addUserBtn" type="button" class="btn btn-warning">Add User</button>
+        </div>
+      </div>
+      <p id="userMsg" class="mt-2 small text-muted"></p>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="h5">Create Table</h2>
+      <div class="row g-2">
+        <div class="col-md-3">
+          <label for="dbName" class="form-label mb-1">Database</label>
+          <input id="dbName" type="text" class="form-control" placeholder="app_db" />
+        </div>
+        <div class="col-md-3">
+          <label for="tableName" class="form-label mb-1">Table</label>
+          <input id="tableName" type="text" class="form-control" placeholder="users" />
+        </div>
+        <div class="col-12">
+          <label for="columns" class="form-label mb-1">Columns</label>
+          <input id="columns" type="text" class="form-control" />
+        </div>
+        <div class="col-12 mt-2">
+          <button id="createTableBtn" type="button" class="btn btn-secondary">Create Table</button>
+        </div>
+      </div>
+      <p id="tableMsg" class="mt-2 small text-muted"></p>
+    </section>
+  </main>
+
+  <script src="./dashboard.js" defer></script>
+</body>
+</html>
